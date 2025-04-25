@@ -1,5 +1,7 @@
 name: e_ommerce_product_listing_app
-description: "A Flutter implementation of an e-commerce product listing app with pagination, search, and sorting features, following Clean Architecture and BLoC pattern."
+description: "A Flutter implementation of an e-commerce product listing app with
+  pagination, search, and sorting features, following Clean Architecture and
+  BLoC pattern."
 publish_to: "none"
 version: 0.1.0
 
@@ -7,13 +9,35 @@ environment:
   sdk: ^3.7.2
 
 dependencies:
+  another_flushbar: ^1.12.30
+  cached_network_image: ^3.4.1
+  connectivity_plus: ^6.1.4
+  dartz: ^0.10.1
+  dio: ^5.8.0+1
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.1.0
+  flutter_dotenv: ^5.2.1
+  freezed_annotation: ^3.0.0
+  get_it: ^8.0.3
+  injectable: ^2.5.0
+  json_annotation: ^4.9.0
+  logger: ^2.5.0
+  retrofit: ^4.4.2
+  shimmer: ^3.0.0
+  vibration: ^3.1.3
 
 dev_dependencies:
+  bloc_test: ^10.0.0
+  build_runner: ^2.4.15
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  freezed: ^3.0.6
+  injectable_generator: ^2.7.0
+  json_serializable: ^6.9.5
+  mocktail: ^1.0.4
+  retrofit_generator: ^9.1.9
 
 flutter:
   uses-material-design: true
