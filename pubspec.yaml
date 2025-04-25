@@ -41,3 +41,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - .env
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter_regular.ttf
+          weight: 400
+        - asset: assets/fonts/inter_medium.ttf
+          weight: 500
+        - asset: assets/fonts/inter_semibold.ttf
+          weight: 600
