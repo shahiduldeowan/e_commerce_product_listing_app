@@ -5,6 +5,7 @@ export 'di/di.dart';
 export 'services/app_logger_services.dart' show LoggerServiceImpl;
 export 'utils/logger_utils.dart';
 export 'utils/navigation_utils.dart';
-
-// package exports
-export 'package:injectable/injectable.dart';
+export 'utils/use_case.dart';
+export 'errors/failures.dart';
+export 'errors/error_handler.dart';
+export 'errors/exceptions.dart';
