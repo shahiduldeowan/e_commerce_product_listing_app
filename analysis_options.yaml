@@ -1,1 +1,55 @@
 include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  language:
+    strict-raw-types: true
+  exclude:
+    - "**/*.freezed.dart"
+    - "**/*.g.dart"
+    - "**/*.config.dart"
+    - "build/**"
+  errors:
+    unused_element: warning
+    unused_import: warning
+    unused_local_variable: warning
+    unused_shown_name: warning
+    unused_field: warning
+    unused_catch_clause: warning
+    unused_label: warning
+    dead_code: warning
+    invalid_use_of_protected_member: error
+    invalid_use_of_visible_for_testing_member: error
+    close_sinks: error
+    avoid_redundant_argument_values: warning
+    invalid_annotation_target: ignore
+linter:
+  rules:
+    prefer_const_constructors: true
+    prefer_const_constructors_in_immutables: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_fields: true
+    avoid_unused_constructor_parameters: true
+    avoid_empty_else: true
+    avoid_print: true
+    avoid_returning_null: true
+    avoid_relative_lib_imports: true
+    curly_braces_in_flow_control_structures: true
+    prefer_typing_uninitialized_variables: true
+    always_specify_types: true
+    omit_local_variable_types: false
+    prefer_null_aware_operators: true
+    prefer_conditional_assignment: true
+    sized_box_for_whitespace: true
+    avoid_unnecessary_containers: true
+    avoid_web_libraries_in_flutter: true
+    prefer_single_quotes: true
+    use_key_in_widget_constructors: true
+    prefer_is_empty: true
+    prefer_is_not_empty: true
+    use_build_context_synchronously: true
+    unnecessary_null_checks: true
+    unnecessary_this: true
+    unnecessary_nullable_for_final_variable_declarations: true
