@@ -48,7 +48,7 @@ extension ProductEntityX on ProductEntity {
   bool get hasDiscount => getDiscountPercentage > 0;
 
   String get getDiscountPercentageAsString =>
-      getDiscountPercentage.toStringAsFixed(0);
+      '${getDiscountPercentage.toStringAsFixed(0)} % OFF';
 
   String get getDiscountPriceAsString {
     double amount =
@@ -57,4 +57,6 @@ extension ProductEntityX on ProductEntity {
             : getPrice;
     return '\$${amount.toStringAsFixed(2)}';
   }
+
+  String get getPriceAsString => '\$${getPrice.toStringAsFixed(2)}';
 }
