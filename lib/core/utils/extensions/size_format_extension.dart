@@ -9,6 +9,13 @@ extension SizeFormatExtension on num {
     return EdgeInsets.only(left: toDouble());
   }
 
+  EdgeInsets toSymmetricEdgeInsets({double? vertical, double? horaizontal}) {
+    return EdgeInsets.symmetric(
+      vertical: vertical ?? toDouble(),
+      horizontal: horaizontal ?? toDouble(),
+    );
+  }
+
   BorderRadius toRoundedBorderRadius() {
     return BorderRadius.circular(toDouble());
   }
