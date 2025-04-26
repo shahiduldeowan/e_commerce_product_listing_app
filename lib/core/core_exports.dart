@@ -15,3 +15,4 @@ export 'constants/route_names.dart';
 export 'constants/asset_names.dart';
 export 'widgets/app_image_view.dart';
 export 'widgets/loading_indicator.dart';
+export 'constants/strings.dart';
