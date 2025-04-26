@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 extension SizeFormatExtension on num {
+  EdgeInsets toAllEdgeInsets() {
+    return EdgeInsets.all(toDouble());
+  }
+
   EdgeInsets toHorizontalEdgeInsets() {
     return EdgeInsets.symmetric(horizontal: toDouble());
   }
