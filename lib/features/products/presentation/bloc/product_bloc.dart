@@ -21,6 +21,7 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
     on<ProductEventFetchInit>(_onProductEventFetchInit);
     on<ProductEventFetchNext>(_onProductEventFetchNext);
     on<ProductEventRefresh>(_onProductEventRefresh);
+    on<ProductEventFavorite>(_onProductEventFavorite);
   }
 
   Future<void> _onProductEventFetchInit(
@@ -42,6 +43,20 @@ class ProductBloc extends Bloc<ProductEvent, ProductState> {
   ) async {
     emit(state.copyWith(status: ProductStatus.refreshing));
     await _fetchProductPage(emit, page: 1, isRefresh: true);
+  }
+
+  Future<void> _onProductEventFavorite(
+    ProductEventFavorite event,
+    Emitter<ProductState> emit,
+  ) async {
+    final List<ProductEntity> newProducts =
+        state.products.map((ProductEntity product) {
+          if (product.id == event.id) {
+            return product.copyWith(isFavorite: !product.isFavorite);
+          }
+          return product;
+        }).toList();
+    emit(state.copyWith(products: newProducts));
   }
 
   Future<void> _fetchProductPage(
