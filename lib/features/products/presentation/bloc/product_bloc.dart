@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:dartz/dartz.dart';
 import 'package:e_ommerce_product_listing_app/core/errors/failures.dart';
 import 'package:e_ommerce_product_listing_app/features/products/domain/entities/pagination_params.dart';
@@ -17,6 +16,7 @@ part 'product_bloc.freezed.dart';
 @injectable
 class ProductBloc extends Bloc<ProductEvent, ProductState> {
   final GetProductsByQueryUseCase _getProductsByQueryUseCase;
+
   ProductBloc(this._getProductsByQueryUseCase) : super(const ProductState()) {
     on<ProductEventFetchInit>(_onProductEventFetchInit);
     on<ProductEventFetchNext>(_onProductEventFetchNext);
