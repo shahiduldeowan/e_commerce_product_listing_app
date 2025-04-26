@@ -1,5 +1,5 @@
 import 'package:e_ommerce_product_listing_app/core/core_exports.dart'
-    show AppSizes, SizeFormatExtension;
+    show AppSizes, SizeFormatExtension, items;
 import 'package:e_ommerce_product_listing_app/features/products/presentation/bloc/product_bloc.dart';
 import 'package:e_ommerce_product_listing_app/features/products/presentation/widgets/product_item_widget.dart';
 import 'package:flutter/material.dart';
@@ -21,23 +21,25 @@ class ProductPages extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Product Length ${state.products.length}'),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      '${state.products.length} $items',
+                      style: Theme.of(context).textTheme.labelLarge,
+                    ),
+                  ),
                   Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(border: Border.all()),
-                      width: double.maxFinite,
-                      child: MasonryGridView.count(
-                        shrinkWrap: true,
-                        crossAxisCount: 2,
-                        crossAxisSpacing: AppSizes.large,
-                        mainAxisSpacing: AppSizes.large,
-                        itemCount: state.products.length,
-                        itemBuilder: (_, int index) {
-                          return ProductItemWidget(
-                            product: state.products[index],
-                          );
-                        },
-                      ),
+                    child: MasonryGridView.count(
+                      shrinkWrap: true,
+                      crossAxisCount: 2,
+                      crossAxisSpacing: AppSizes.large,
+                      mainAxisSpacing: AppSizes.large,
+                      itemCount: state.products.length,
+                      itemBuilder: (_, int index) {
+                        return ProductItemWidget(
+                          product: state.products[index],
+                        );
+                      },
                     ),
                   ),
                 ],
