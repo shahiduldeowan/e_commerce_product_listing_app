@@ -13,6 +13,9 @@ class AppColors {
   static const Color red500 = Color(0xFFEF4444);
   static const Color white = Color(0xFFFFFFFF);
 
+  static Color greyShade200 = Colors.grey.shade200;
+  static Color greyShade100 = Colors.grey.shade100;
+
   /// Containing the supported color schemes.
   static const ColorScheme lightColorScheme = ColorScheme.light(
     primary: orange900,
