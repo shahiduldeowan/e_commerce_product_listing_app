@@ -74,6 +74,13 @@ class AppImageView extends StatelessWidget {
   }
 
   SvgPicture _buildSvgImage() {
-    return SvgPicture.asset(url, height: height, width: width, fit: fit);
+    return SvgPicture.asset(
+      url,
+      height: height,
+      width: width,
+      fit: fit,
+      colorFilter:
+          color == null ? null : ColorFilter.mode(color!, BlendMode.srcIn),
+    );
   }
 }
