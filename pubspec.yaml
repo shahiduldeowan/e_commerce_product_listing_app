@@ -20,6 +20,7 @@ dependencies:
   flutter_dotenv: ^5.2.1
   freezed_annotation: ^3.0.0
   get_it: ^8.0.3
+  infinite_scroll_pagination: ^5.0.0
   injectable: ^2.5.0
   json_annotation: ^4.9.0
   logger: ^2.5.0
