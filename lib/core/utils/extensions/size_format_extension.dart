@@ -8,4 +8,8 @@ extension SizeFormatExtension on num {
   EdgeInsets toLeftEdgeInsets() {
     return EdgeInsets.only(left: toDouble());
   }
+
+  BorderRadius toRoundedBorderRadius() {
+    return BorderRadius.circular(toDouble());
+  }
 }
