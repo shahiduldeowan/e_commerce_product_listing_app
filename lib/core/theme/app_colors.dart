@@ -16,5 +16,6 @@ class AppColors {
   /// Containing the supported color schemes.
   static const ColorScheme lightColorScheme = ColorScheme.light(
     primary: orange900,
+    surface: white,
   );
 }
