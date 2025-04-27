@@ -1,0 +1,26 @@
+flutter_launcher_icons:
+  image_path: "assets/images/launcher_icon.png"
+
+  android: "launcher_icon"
+  min_sdk_android: 21
+  adaptive_icon_background: "#EA580C"
+  adaptive_icon_foreground: "assets/images/launcher_icon.png"
+
+  ios: true
+  remove_alpha_channel_ios: true
+  background_color_ios: "#EA580C"
+
+  web:
+    generate: true
+    image_path: "assets/images/launcher_icon.png"
+    background_color: "#EA580C"
+    theme_color: "#EA580C"
+
+  windows:
+    generate: true
+    image_path: "assets/images/launcher_icon.png"
+    icon_size: 48
+
+  macos:
+    generate: true
+    image_path: "assets/images/launcher_icon.png"
