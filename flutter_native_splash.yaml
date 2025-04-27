@@ -1,0 +1,13 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  web: false
+
+  android_gravity: center
+  ios_content_mode: center
+  color: "#EA580C"
+  image: assets/images/launcher_icon.png
+
+  android_12:
+    color: "#EA580C"
+    image: assets/images/launcher_icon.png
